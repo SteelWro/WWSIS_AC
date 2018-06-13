@@ -1,0 +1,35 @@
+#include <iostream>
+#include <stack>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    int n, param;
+    int l = 0;
+    string method;
+
+    stack <int> St1;
+    cin>>n;
+    int tab[n];
+
+    for(int i=0;i<n;i++){
+        cin>>method;
+            if(method=="push"){
+                cin>>param;
+                St1.push(param);
+            }
+            else if(method=="pop"){
+                if(!St1.empty())St1.pop();
+            }else if(!St1.empty()){
+                tab[l] = St1.top();
+                l++;
+            }
+      }
+      if(!St1.empty()){
+          for(int i=0;i<l;i++) cout<<tab[i]<<endl;
+          cout<<"all done";
+      }
+      return 0;
+}
