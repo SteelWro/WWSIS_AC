@@ -1,2 +1,2 @@
 # WWSIS_AC
-It's simply my algorithms from LAB
+It's my exercise algorithms on University
